@@ -1,7 +1,12 @@
 package br.edu.femass.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
+
+//Para não colocar no JSON algum método/atributo
+@JsonIgnoreProperties("historico")
 
 public class Conta {
 
@@ -11,6 +16,10 @@ public class Conta {
     private List<Historico> historicos;
 
     private static Long proximoNumero = 1L;
+
+    public Conta(){
+
+    }
 
     public Conta(Double especial){
         this.numero = proximoNumero;

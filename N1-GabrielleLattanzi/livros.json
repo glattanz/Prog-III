@@ -1,0 +1,105 @@
+[ {
+  "codigo" : 1,
+  "titulo" : "Sei la",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "Sei la",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "caguei",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "PÓRRRAAA",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "ue",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "lucas",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "nome",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "dkdodkodok",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 2,
+  "titulo" : "dkdodkodok",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "livro",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 2,
+  "titulo" : "livro",
+  "listaAutores" : [ {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  } ]
+}, {
+  "codigo" : 3,
+  "titulo" : "livro",
+  "listaAutores" : [ {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "nome",
+  "listaAutores" : [ {
+    "nome" : "Kiera",
+    "sobrenome" : "Cass",
+    "nacionalidade" : "Cass"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "davi",
+    "sobrenome" : "trajano",
+    "nacionalidade" : "chines"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "titulo",
+  "listaAutores" : [ {
+    "nome" : "claudia",
+    "sobrenome" : "lattanzi",
+    "nacionalidade" : "brasileira"
+  } ]
+} ]

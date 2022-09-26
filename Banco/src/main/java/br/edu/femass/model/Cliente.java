@@ -1,10 +1,11 @@
 package br.edu.femass.model;
 
 import br.edu.femass.utils.CPF;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Cliente {
 
@@ -13,22 +14,24 @@ public class Cliente {
     private String endereco;
     private List<Conta> contas;
 
-    public Cliente(String nome, String cpf){
+    public Cliente(String nome, String cpf) {
         this.nome = nome;
-
-        //if(CPF.isCPF(cpf)==false){
-        //    throw new IllegalArgumentException("CPF inválido");
-        //}
+        if (CPF.isCPF(cpf)==false) {
+            throw new IllegalArgumentException("CPF Inválido");
+        }
         this.cpf = cpf;
         this.contas = new ArrayList<Conta>();
     }
 
-    public Cliente(String nome, String cpf, String endereco){
-        this.nome = nome;
+    public Cliente(){
 
-        //if(CPF.isCPF(cpf)==false){
-        //    throw new IllegalArgumentException("CPF inválido");
-        //}
+    }
+
+    public Cliente(String nome, String cpf, String endereco) {
+        this.nome = nome;
+        if (CPF.isCPF(cpf)==false) {
+            throw new IllegalArgumentException("CPF Inválido");
+        }
         this.cpf = cpf;
         this.endereco = endereco;
         this.contas = new ArrayList<Conta>();

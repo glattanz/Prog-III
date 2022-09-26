@@ -15,6 +15,10 @@ public class Historico {
         this.tipoLancamento = tipoLancamento;
     }
 
+    public Historico(){
+
+    }
+
     @Override
     public String toString(){
         return data.format(DateTimeFormatter.ofPattern("dd/MM/yy hh:mm:ss")) +
