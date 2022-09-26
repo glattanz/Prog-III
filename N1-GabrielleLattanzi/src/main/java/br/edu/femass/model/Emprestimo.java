@@ -7,14 +7,24 @@ public class Emprestimo {
 
     private LocalDate dataEmprestimo;
     private LocalDate dataPrevistaDevolucao;
-
     private LocalDate dataDevolucao = null;
     private Exemplar exemplar;
+    private Leitor leitor;
+    private Livro livro;
+    private String teste;
+
+
+    public Emprestimo(){
+
+    }
 
     public Emprestimo(Leitor leitor, Exemplar exemplar){
         this.dataEmprestimo = LocalDate.now();
         this.dataPrevistaDevolucao = LocalDate.now().plusDays(leitor.getPrazoMaximoDevolucao());
+        this.leitor = leitor;
         this.exemplar = exemplar;
+        this.livro = exemplar.getLivro();
+        this.teste = this.leitor + " " +  this.livro + " " + this.dataEmprestimo + " " + this.exemplar.getCodigo();
     }
 
     public void realizarDevolucao(){
@@ -46,4 +56,14 @@ public class Emprestimo {
     public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
+
+    public Exemplar getExemplar() {
+        return exemplar;
+    }
+
+    @Override
+    public String toString() {
+        return livro.getTitulo();
+    }
+
 }

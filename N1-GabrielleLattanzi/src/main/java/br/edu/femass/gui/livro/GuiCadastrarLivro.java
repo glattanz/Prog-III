@@ -12,10 +12,10 @@ import java.util.List;
 
 public class GuiCadastrarLivro {
     private JTextField campoTitulo;
-    public JComboBox comboBoxAutores;
     private JPanel jPanelCadastrarLivro;
     private JButton botaoCadastrarLivro;
     public JList listaAutores;
+    private JComboBox comboBox1;
 
     public GuiCadastrarLivro() {
         botaoCadastrarLivro.addActionListener(new ActionListener() {
@@ -29,8 +29,6 @@ public class GuiCadastrarLivro {
                     if(listaAutores.getSelectedValuesList() == null){
                         JOptionPane.showMessageDialog(jPanelCadastrarLivro, "Selecione um autor");
                     }
-
-                    //Livro livro = new Livro(campoTitulo.getText(), (Autor) comboBoxAutores.getSelectedItem());
 
                     Livro livro = new Livro(campoTitulo.getText(), listaAutores.getSelectedValuesList());
                     new DaoLivro().save(livro);
@@ -61,7 +59,7 @@ public class GuiCadastrarLivro {
             throw new RuntimeException(e);
         }
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         frame.pack();
 

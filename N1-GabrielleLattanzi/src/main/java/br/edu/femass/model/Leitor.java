@@ -1,6 +1,9 @@
 package br.edu.femass.model;
 
+import jdk.jshell.spi.ExecutionEnv;
+
 import java.time.LocalDate;
+import java.util.List;
 
 public class Leitor {
 
@@ -10,6 +13,7 @@ public class Leitor {
     private String endereco;
     private String telefone;
     private int prazoMaximoDevolucao;
+    private List<Exemplar> exemplarList;
 
     public Leitor(){
 
@@ -33,32 +37,9 @@ public class Leitor {
         System.out.println("Devolucao realizada.");
     }
 
-    public void imprimirLeitor(Leitor leitor){
-        System.out.println("Nome: " + leitor.nome);
-        System.out.println("Endereco: " + leitor.endereco);
-        System.out.println("Telefone: " + leitor.telefone);
-    }
-
     public static void setProximoCodigo(Long proximoCodigo) {
         Leitor.proximoCodigo = proximoCodigo;
     }
-
-//    public void imprimirEmprestimo(){
-//        System.out.println("INFORMACOES DO EMPRESTIMO: ");
-//        //Emprestimo emprestimo = new Emprestimo();
-//        System.out.println("Data do emprestimo: " + emprestimo.getDataEmprestimo());
-//        System.out.println("Data prevista de devolucao: " + emprestimo.getDataPrevistaDevolucao());
-//
-//        if(emprestimo.getDataDevolucao() != null){
-//            System.out.println("Data de devolucao: " + emprestimo.getDataDevolucao());
-//        }
-//
-//        System.out.println("INFORMACOES DO EXEMPLAR");
-//
-//
-//        System.out.println("INFORMACOES DO LEITOR");
-//        this.imprimirLeitor(this);
-//    }
 
     //Getters and Setters
     public Long getCodigo() {
@@ -99,5 +80,10 @@ public class Leitor {
 
     public void setPrazoMaximoDevolucao(int prazoMaximoDevolucao) {
         this.prazoMaximoDevolucao = prazoMaximoDevolucao;
+    }
+
+    @Override
+    public String toString() {
+        return this.nome;
     }
 }

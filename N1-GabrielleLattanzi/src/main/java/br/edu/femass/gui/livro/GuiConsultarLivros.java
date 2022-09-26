@@ -1,9 +1,6 @@
 package br.edu.femass.gui.livro;
 
-import br.edu.femass.dao.DaoAutor;
 import br.edu.femass.dao.DaoLivro;
-import br.edu.femass.gui.autor.GuiAutor;
-import br.edu.femass.model.Autor;
 import br.edu.femass.model.Livro;
 
 import javax.swing.*;

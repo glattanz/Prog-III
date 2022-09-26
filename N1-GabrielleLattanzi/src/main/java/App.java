@@ -1,37 +1,47 @@
-import br.edu.femass.dao.DaoAluno;
-import br.edu.femass.dao.DaoAutor;
-import br.edu.femass.dao.DaoLivro;
-import br.edu.femass.dao.DaoProfessor;
+import br.edu.femass.dao.*;
 import br.edu.femass.model.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class App {
 
     public static void main(String[] args) {
 
-        Autor autor = new Autor("Jorge", "Amado", "Brasileiro");
+        Autor autor = new Autor("Nome", "Sobrenome", "Brasileiro");
 
-//        List<Autor> autores = null;
-//        autores.add(autor);
+        List<Autor> listaAutores = new ArrayList<>();
+        listaAutores.add(autor);
 
-        Livro livro = new Livro("Sei la", autor);
+        Livro livro = new Livro("Título", listaAutores);
 
-        DaoAutor daoAutor = new DaoAutor();
+        Aluno aluno = new Aluno("Gabrielle", "Rua J", "22 999999", "123123");
+
+        DaoAluno daoAluno = new DaoAluno();
 
         try{
-            daoAutor.save(autor);
+            daoAluno.save(aluno);
         }catch (Exception e){
-            e.printStackTrace();
             System.out.println(e.getMessage());
         }
 
-       DaoLivro daoLivro = new DaoLivro();
+        Exemplar exemplar = new Exemplar(livro);
+
+        DaoExemplar daoExemplar = new DaoExemplar();
 
         try{
-            daoLivro.save(livro);
+            daoExemplar.save(exemplar);
         }catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+
+        Emprestimo emprestimo = new Emprestimo(aluno, exemplar);
+
+        DaoEmprestimo daoEmprestimo = new DaoEmprestimo();
+
+        try{
+            daoEmprestimo.save(emprestimo);
+        }catch (Exception e){
             System.out.println(e.getMessage());
         }
     }

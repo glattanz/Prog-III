@@ -1,73 +1,105 @@
 [ {
   "codigo" : 1,
   "titulo" : "Sei la",
-  "autor" : {
-    "nome" : "Jorge",
-    "sobrenome" : "Amado",
-    "nacionalidade" : "Brasileiro"
-  }
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "",
-  "autor" : null
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "Sei la",
-  "autor" : {
-    "nome" : "Jorge",
-    "sobrenome" : "Amado",
-    "nacionalidade" : "Brasileiro"
-  }
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "caguei",
-  "autor" : null
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "PÓRRRAAA",
-  "autor" : {
-    "nome" : "Kiera",
-    "sobrenome" : "Cass",
-    "nacionalidade" : "Cass"
-  }
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "ue",
-  "autor" : null
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "lucas",
-  "autor" : {
-    "nome" : "caio",
-    "sobrenome" : "lucas",
-    "nacionalidade" : "br"
-  }
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "nome",
-  "autor" : {
-    "nome" : "caio",
-    "sobrenome" : "lucas",
-    "nacionalidade" : "br"
-  }
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
   "titulo" : "dkdodkodok",
-  "autor" : null
+  "listaAutores" : [ ]
 }, {
   "codigo" : 2,
   "titulo" : "dkdodkodok",
-  "autor" : {
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 1,
+  "titulo" : "livro",
+  "listaAutores" : [ ]
+}, {
+  "codigo" : 2,
+  "titulo" : "livro",
+  "listaAutores" : [ {
     "nome" : "Jorge",
     "sobrenome" : "Amado",
     "nacionalidade" : "Brasileiro"
-  }
+  } ]
+}, {
+  "codigo" : 3,
+  "titulo" : "livro",
+  "listaAutores" : [ {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  } ]
 }, {
   "codigo" : 1,
   "titulo" : "",
-  "autor" : null
+  "listaAutores" : [ ]
 }, {
   "codigo" : 1,
-  "titulo" : "",
-  "autor" : null
+  "titulo" : "nome",
+  "listaAutores" : [ {
+    "nome" : "Kiera",
+    "sobrenome" : "Cass",
+    "nacionalidade" : "Cass"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "Jorge",
+    "sobrenome" : "Amado",
+    "nacionalidade" : "Brasileiro"
+  }, {
+    "nome" : "davi",
+    "sobrenome" : "trajano",
+    "nacionalidade" : "chines"
+  } ]
+}, {
+  "codigo" : 1,
+  "titulo" : "titulo",
+  "listaAutores" : [ {
+    "nome" : "claudia",
+    "sobrenome" : "lattanzi",
+    "nacionalidade" : "brasileira"
+  } ]
 } ]

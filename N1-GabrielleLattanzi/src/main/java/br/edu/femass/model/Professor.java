@@ -16,4 +16,8 @@ public class Professor extends Leitor{
         setProximoCodigo(this.getCodigo() + 1);
         this.disciplina = disciplina;
     }
+
+    public String getDisciplina() {
+        return disciplina;
+    }
 }

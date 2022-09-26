@@ -1,5 +1,6 @@
 package br.edu.femass.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
@@ -11,27 +12,17 @@ public class Livro {
 
     private Autor autor;
 
-    private List<Autor> listaAutores = null;
+    private List<Autor> listaAutores = new ArrayList<>();
+    private List<Exemplar> listaExemplares = new ArrayList<>();
 
     public Livro(){
-
     }
 
     public Livro(String titulo, List<Autor> autores){
         this.codigo = proximoCodigo;
         proximoCodigo++;
         this.titulo = titulo;
-//        for (Autor autor: autores) {
-//            listaAutores.add(autor);
-//        }
         listaAutores.addAll(autores);
-    }
-
-    public Livro(String titulo, Autor autor){
-        this.codigo = proximoCodigo;
-        proximoCodigo++;
-        this.titulo = titulo;
-        listaAutores.add(autor);
     }
 
     public static void imprimeLivro(Livro livro){
@@ -49,10 +40,6 @@ public class Livro {
         return titulo;
     }
 
-    public Autor getAutor() {
-        return autor;
-    }
-
     public void setCodigo(Long codigo) {
         this.codigo = codigo;
     }
@@ -61,7 +48,12 @@ public class Livro {
         this.titulo = titulo;
     }
 
-    public void setAutor(Autor autor) {
-        this.autor = autor;
+    public List<Autor> getListaAutores() {
+        return listaAutores;
+    }
+
+    @Override
+    public String toString() {
+        return this.titulo;
     }
 }

@@ -8,6 +8,7 @@ import javax.swing.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 
 public class GuiCadastrarAutor {
@@ -16,6 +17,7 @@ public class GuiCadastrarAutor {
     private JTextField campoSobrenome;
     private JTextField campoNacionalidade;
     private JButton botaoSalvar;
+    public JList listaAutores;
 
     GuiCadastrarLivro guiCadastrarLivro = new GuiCadastrarLivro();
 
@@ -46,7 +48,16 @@ public class GuiCadastrarAutor {
         frame.setContentPane(guiCadastrarAutor.jPanelCadastrarAutor);
 
         //Configuração do botão de fechar
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        try {
+            //Cria uma nova lista com todos os autores cadastrados no DaoAutor
+            List<Autor> autores = new DaoAutor().getAll();
+            //Atualiza a lista
+            guiCadastrarAutor.listaAutores.setListData(autores.toArray());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         //Mantem o layout independente do sistema operacional
         frame.pack();

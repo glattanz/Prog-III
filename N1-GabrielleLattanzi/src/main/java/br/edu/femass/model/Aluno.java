@@ -15,4 +15,7 @@ public class Aluno extends Leitor{
         this.matricula = matricula;
     }
 
+    public String getMatricula() {
+        return matricula;
+    }
 }

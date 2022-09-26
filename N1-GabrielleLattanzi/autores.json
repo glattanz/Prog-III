@@ -90,4 +90,20 @@
   "nome" : "Jorge",
   "sobrenome" : "Amado",
   "nacionalidade" : "Brasileiro"
+}, {
+  "nome" : "autor",
+  "sobrenome" : "sobrenome",
+  "nacionalidade" : "brasileiro"
+}, {
+  "nome" : "autor",
+  "sobrenome" : "sobrenome",
+  "nacionalidade" : "brasileiro"
+}, {
+  "nome" : "",
+  "sobrenome" : "",
+  "nacionalidade" : ""
+}, {
+  "nome" : "claudia",
+  "sobrenome" : "lattanzi",
+  "nacionalidade" : "brasileira"
 } ]
