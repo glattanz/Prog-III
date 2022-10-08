@@ -1,109 +1,22 @@
 [ {
+  "codigo" : 1,
+  "nome" : "Isac",
+  "endereco" : "Rua I",
+  "telefone" : "2288999933",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Projeto de Sistemas II"
+}, {
+  "codigo" : 2,
+  "nome" : "Ireneu",
+  "endereco" : "Rua I",
+  "telefone" : "2233445566",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Estrutura de Dados II"
+}, {
   "codigo" : 3,
-  "nome" : "",
-  "endereco" : "",
-  "telefone" : "",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 4,
-  "nome" : "",
-  "endereco" : "",
-  "telefone" : "",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
-}, {
-  "codigo" : 2,
-  "nome" : "Alan",
-  "endereco" : "Rua K",
-  "telefone" : "2233111222",
-  "prazoMaximoDevolucao" : 30
+  "nome" : "Afonso",
+  "endereco" : "Rua A",
+  "telefone" : "2288997766",
+  "prazoMaximoDevolucao" : 30,
+  "disciplina" : "Qualidade de Software"
 } ]

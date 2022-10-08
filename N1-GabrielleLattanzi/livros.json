@@ -1,105 +1,73 @@
 [ {
   "codigo" : 1,
-  "titulo" : "Sei la",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "Sei la",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "caguei",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "PÓRRRAAA",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "ue",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "lucas",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "nome",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "dkdodkodok",
-  "listaAutores" : [ ]
+  "titulo" : "Pedra Filosofal",
+  "listaAutores" : [ {
+    "nome" : "J. K.",
+    "sobrenome" : "Rowling",
+    "nacionalidade" : "Britânico"
+  } ],
+  "qntExemplares" : 0
 }, {
   "codigo" : 2,
-  "titulo" : "dkdodkodok",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "livro",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 2,
-  "titulo" : "livro",
+  "titulo" : "Capitães de Areia",
   "listaAutores" : [ {
     "nome" : "Jorge",
     "sobrenome" : "Amado",
     "nacionalidade" : "Brasileiro"
-  } ]
+  } ],
+  "qntExemplares" : 0
 }, {
   "codigo" : 3,
-  "titulo" : "livro",
+  "titulo" : "Dom Casmuro",
+  "listaAutores" : [ {
+    "nome" : "Machado",
+    "sobrenome" : "de Asis",
+    "nacionalidade" : "Brasileiro"
+  } ],
+  "qntExemplares" : 0
+}, {
+  "codigo" : 4,
+  "titulo" : "Cálice de Fogo",
+  "listaAutores" : [ {
+    "nome" : "J. K.",
+    "sobrenome" : "Rowling",
+    "nacionalidade" : "Britânico"
+  } ],
+  "qntExemplares" : 0
+}, {
+  "codigo" : 5,
+  "titulo" : "Memórias Póstumas de Brás-Cubas",
+  "listaAutores" : [ {
+    "nome" : "Machado",
+    "sobrenome" : "de Asis",
+    "nacionalidade" : "Brasileiro"
+  } ],
+  "qntExemplares" : 0
+}, {
+  "codigo" : 6,
+  "titulo" : "Gabriela, Cravo e Canela",
   "listaAutores" : [ {
     "nome" : "Jorge",
     "sobrenome" : "Amado",
     "nacionalidade" : "Brasileiro"
-  } ]
+  } ],
+  "qntExemplares" : 0
 }, {
-  "codigo" : 1,
-  "titulo" : "",
-  "listaAutores" : [ ]
-}, {
-  "codigo" : 1,
-  "titulo" : "nome",
+  "codigo" : 7,
+  "titulo" : "Relíquias da Morte",
   "listaAutores" : [ {
-    "nome" : "Kiera",
-    "sobrenome" : "Cass",
-    "nacionalidade" : "Cass"
-  }, {
-    "nome" : "Jorge",
-    "sobrenome" : "Amado",
-    "nacionalidade" : "Brasileiro"
-  }, {
-    "nome" : "Jorge",
-    "sobrenome" : "Amado",
-    "nacionalidade" : "Brasileiro"
-  }, {
-    "nome" : "Jorge",
-    "sobrenome" : "Amado",
-    "nacionalidade" : "Brasileiro"
-  }, {
-    "nome" : "davi",
-    "sobrenome" : "trajano",
-    "nacionalidade" : "chines"
-  } ]
+    "nome" : "J. K.",
+    "sobrenome" : "Rowling",
+    "nacionalidade" : "Britânico"
+  } ],
+  "qntExemplares" : 0
 }, {
-  "codigo" : 1,
-  "titulo" : "titulo",
+  "codigo" : 8,
+  "titulo" : "A Sociedade do Anel",
   "listaAutores" : [ {
-    "nome" : "claudia",
-    "sobrenome" : "lattanzi",
-    "nacionalidade" : "brasileira"
-  } ]
+    "nome" : "J. R. R.",
+    "sobrenome" : "Tolkien",
+    "nacionalidade" : "Britânico"
+  } ],
+  "qntExemplares" : 0
 } ]

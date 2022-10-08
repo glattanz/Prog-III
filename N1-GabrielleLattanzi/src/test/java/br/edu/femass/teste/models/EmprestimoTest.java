@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmprestimoTest {
 
     @Test
-    void criarEmprestimo(){
+    void criarEmprestimo() throws Exception {
 
         Leitor leitor = new Leitor("Nome", "Endereço", "Telefone");
         Exemplar exemplar = new Exemplar(new Livro());
@@ -33,7 +33,7 @@ class EmprestimoTest {
     }
 
     @Test
-    void criarEmprestimoAluno(){
+    void criarEmprestimoAluno() throws Exception {
 
         Aluno aluno = new Aluno("Nome", "Endereço", "Telefone", "Matrícula");
         Exemplar exemplar = new Exemplar(new Livro());
@@ -52,7 +52,7 @@ class EmprestimoTest {
     }
 
     @Test
-    void criarEmprestimoProfessor(){
+    void criarEmprestimoProfessor() throws Exception {
 
         Professor professor = new Professor("Nome", "Endereço", "Telefone", "Matrícula");
         Exemplar exemplar = new Exemplar(new Livro());
@@ -76,7 +76,7 @@ class EmprestimoTest {
     }
 
     @Test
-    void teste(){
+    void teste() throws Exception {
 
         Autor autor = new Autor("Nome", "Sobrenome", "Nacionalidade");
         List<Autor> autores = new ArrayList<>();

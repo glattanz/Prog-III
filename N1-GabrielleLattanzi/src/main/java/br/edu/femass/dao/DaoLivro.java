@@ -1,14 +1,15 @@
 package br.edu.femass.dao;
 
 import br.edu.femass.model.Livro;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonIdentityInfo
 public class DaoLivro extends Persistence<Livro> implements Dao<Livro>{
 
     private final static String NOMEARQUIVO = "livros.json";
@@ -33,5 +34,26 @@ public class DaoLivro extends Persistence<Livro> implements Dao<Livro>{
         } catch (FileNotFoundException f){
             return new ArrayList();
         }
+    }
+
+    public void update(Livro livroAtualizado) throws Exception {
+
+        List<Livro> livros = getAll();
+        List<Livro> livrosAtualizados = new ArrayList<>();
+
+        for (Livro livro : livros) {
+            if (livro.getCodigo() == livroAtualizado.getCodigo()) {
+                livro.setTitulo(livroAtualizado.getTitulo());
+                livro.setListaAutores(livroAtualizado.getListaAutores());
+                livro.setListaExemplares(livroAtualizado.getListaExemplares());
+            }
+            livrosAtualizados.add(livro);
+        }
+
+        String json = getObjectmapper().writerWithDefaultPrettyPrinter().writeValueAsString(livrosAtualizados);
+
+        FileOutputStream out = new FileOutputStream(NOMEARQUIVO);
+        out.write(json.getBytes());
+        out.close();
     }
 }

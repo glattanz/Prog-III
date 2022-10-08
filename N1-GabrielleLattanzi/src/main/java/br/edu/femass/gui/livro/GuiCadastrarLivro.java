@@ -22,13 +22,8 @@ public class GuiCadastrarLivro {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-//                    do{
-//                        JOptionPane.showMessageDialog(jPanelCadastrarLivro, "Selecione um autor");
-//                    }while(listaAutores.getSelectedValue() == null);
-
-                    if(listaAutores.getSelectedValuesList() == null){
-                        JOptionPane.showMessageDialog(jPanelCadastrarLivro, "Selecione um autor");
-                    }
+                    if(campoTitulo.getText().isEmpty() || listaAutores.getSelectedValuesList().isEmpty())
+                        JOptionPane.showMessageDialog(getjPanelCadastrarLivro(), "Preencha todos os campos!");
 
                     Livro livro = new Livro(campoTitulo.getText(), listaAutores.getSelectedValuesList());
                     new DaoLivro().save(livro);
@@ -38,6 +33,9 @@ public class GuiCadastrarLivro {
                     JOptionPane.showMessageDialog(null, ex.getMessage());
                 }
             }
+
+
+
         });
     }
 
@@ -45,24 +43,5 @@ public class GuiCadastrarLivro {
         return jPanelCadastrarLivro;
     }
 
-    public static void main(String[] args) {
-        GuiCadastrarLivro guiCadastrarLivro = new GuiCadastrarLivro();
-        JFrame frame = new JFrame("Cadastrar livro");
-        frame.setContentPane(guiCadastrarLivro.jPanelCadastrarLivro);
 
-        try {
-            //Cria uma nova lista com todos os autores cadastrados no DaoAutor
-            List<Autor> autores = new DaoAutor().getAll();
-            //Atualiza a lista
-            guiCadastrarLivro.listaAutores.setListData(autores.toArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
-    }
 }

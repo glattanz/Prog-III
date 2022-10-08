@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AlunoTest {
 
     @Test
-    void criarAluno(){
+    void criarAluno() throws Exception {
 
         Aluno aluno = new Aluno("Nome", "Endereço", "Telefone", "Matrícula");
 

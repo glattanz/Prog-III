@@ -86,24 +86,16 @@ public class GuiBibliotecario {
 
     }
 
-    public JPanel getjPanelBibliotecario() {
-        return jPanelBibliotecario;
+    public void updateList(){
+        try {
+            List<Autor> autores = new DaoAutor().getAll();
+            this.listaLivros.setListData(autores.toArray());
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
-    public static void main(String[] args) {
-        GuiBibliotecario guiBibliotecario = new GuiBibliotecario();
-        JFrame frame = new JFrame("Bibliotecario");
-        frame.setContentPane(guiBibliotecario.getjPanelBibliotecario());
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        try {
-            List<Livro> livros = new DaoLivro().getAll();
-            guiBibliotecario.listaLivros.setListData(livros.toArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        frame.pack();
-        frame.setVisible(true);
+    public JPanel getjPanelBibliotecario() {
+        return jPanelBibliotecario;
     }
 }

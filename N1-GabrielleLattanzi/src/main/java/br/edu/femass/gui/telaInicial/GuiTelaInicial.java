@@ -9,16 +9,16 @@ import java.awt.event.ActionListener;
 import java.util.List;
 
 public class GuiTelaInicial {
-    private JTextField campoUser;
-    private JPanel jPanelTelaInicial;
+    public JPanel jPanelTelaInicial;
     private JTextField campoSenha;
     private JButton entrarButton;
+    private JComboBox userComboBox;
 
     public GuiTelaInicial() {
         entrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(campoUser.getText().equals("atendente") && campoSenha.getText().equals("123")){
+                if(userComboBox.getSelectedItem().equals("atendente") && campoSenha.getText().equals("123")){
                     GuiAtendente guiAtendente = new GuiAtendente();
                     JFrame frame = new JFrame("Atendente");
                     frame.setContentPane(guiAtendente.getjPanelAtendente());
@@ -26,7 +26,7 @@ public class GuiTelaInicial {
                     frame.pack();
                     frame.setVisible(true);
 
-                }else if(campoUser.getText().equals("bibliotecario") && campoSenha.getText().equals("123")){
+                }else if(userComboBox.getSelectedItem().equals("bibliotecario") && campoSenha.getText().equals("123")){
                     GuiBibliotecario guiBibliotecario = new GuiBibliotecario();
                     JFrame frame = new JFrame("Bibliotecario");
                     frame.setContentPane(guiBibliotecario.getjPanelBibliotecario());
@@ -41,20 +41,20 @@ public class GuiTelaInicial {
 
                     frame.pack();
                     frame.setVisible(true);
+
+                } else if (userComboBox.getSelectedItem().equals("Selecione um usuário")) {
+                    JOptionPane.showMessageDialog(jPanelTelaInicial,"Selecione um usuário!");
+
+                }else if(!(campoSenha.getText().equals("123"))){
+                    JOptionPane.showMessageDialog(jPanelTelaInicial,"Senha inválida!");
+
                 }
             }
         });
     }
 
-    public static void main(String[] args) {
-        GuiTelaInicial guiTelaInicial = new GuiTelaInicial();
-        JFrame frame = new JFrame("Login");
-        frame.setContentPane(guiTelaInicial.jPanelTelaInicial);
-
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
-    }
+//    private void createUIComponents() {
+//        // TODO: place custom component creation code here
+//        imagem = new JLabel(new ImageIcon("imagemTelaInicial.png"));
+//    }
 }

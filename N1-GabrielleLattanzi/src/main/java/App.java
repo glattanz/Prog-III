@@ -1,48 +1,21 @@
-import br.edu.femass.dao.*;
-import br.edu.femass.model.*;
+import br.edu.femass.dao.DaoExemplar;
+import br.edu.femass.gui.telaInicial.GuiTelaInicial;
+import br.edu.femass.model.Exemplar;
 
-import java.util.ArrayList;
-import java.util.List;
+import javax.swing.*;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        Autor autor = new Autor("Nome", "Sobrenome", "Brasileiro");
+        GuiTelaInicial guiTelaInicial = new GuiTelaInicial();
+        JFrame frame = new JFrame("Login");
+        frame.setContentPane(guiTelaInicial.jPanelTelaInicial);
 
-        List<Autor> listaAutores = new ArrayList<>();
-        listaAutores.add(autor);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        Livro livro = new Livro("Título", listaAutores);
+        frame.pack();
 
-        Aluno aluno = new Aluno("Gabrielle", "Rua J", "22 999999", "123123");
-
-        DaoAluno daoAluno = new DaoAluno();
-
-        try{
-            daoAluno.save(aluno);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        Exemplar exemplar = new Exemplar(livro);
-
-        DaoExemplar daoExemplar = new DaoExemplar();
-
-        try{
-            daoExemplar.save(exemplar);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        Emprestimo emprestimo = new Emprestimo(aluno, exemplar);
-
-        DaoEmprestimo daoEmprestimo = new DaoEmprestimo();
-
-        try{
-            daoEmprestimo.save(emprestimo);
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
+        frame.setVisible(true);
     }
 }

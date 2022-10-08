@@ -8,7 +8,4 @@ public class GuiAlterarAluno {
     private JTextField textField2;
     private JTextField textField3;
     private JTextField textField4;
-
-    public static void main(String[] args) {
-    }
 }

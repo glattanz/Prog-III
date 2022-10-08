@@ -71,14 +71,4 @@ public class GuiLivro {
         comboBoxLivros.addItem(livro);
     }
 
-    public static void main(String[] args) {
-        GuiLivro guiLivro = new GuiLivro();
-        JFrame frame = new JFrame("Cadastrar livro");
-        frame.setContentPane(guiLivro.jPanelLivro);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
-    }
 }

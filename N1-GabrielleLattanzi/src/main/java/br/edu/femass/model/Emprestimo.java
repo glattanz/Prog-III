@@ -9,10 +9,7 @@ public class Emprestimo {
     private LocalDate dataPrevistaDevolucao;
     private LocalDate dataDevolucao = null;
     private Exemplar exemplar;
-    private Leitor leitor;
-    private Livro livro;
-    private String teste;
-
+    private String nomeEmprestimo;
 
     public Emprestimo(){
 
@@ -21,10 +18,8 @@ public class Emprestimo {
     public Emprestimo(Leitor leitor, Exemplar exemplar){
         this.dataEmprestimo = LocalDate.now();
         this.dataPrevistaDevolucao = LocalDate.now().plusDays(leitor.getPrazoMaximoDevolucao());
-        this.leitor = leitor;
         this.exemplar = exemplar;
-        this.livro = exemplar.getLivro();
-        this.teste = this.leitor + " " +  this.livro + " " + this.dataEmprestimo + " " + this.exemplar.getCodigo();
+        //this.nomeEmprestimo = leitor.getNome() + " - " + exemplar.getLivro().getTitulo() + " - " + this.dataEmprestimo + " - Cód: " + this.exemplar.getCodigo();
     }
 
     public void realizarDevolucao(){
@@ -37,16 +32,8 @@ public class Emprestimo {
         return dataEmprestimo;
     }
 
-    public void setDataEmprestimo(LocalDate dataEmprestimo) {
-        this.dataEmprestimo = dataEmprestimo;
-    }
-
     public LocalDate getDataPrevistaDevolucao() {
         return dataPrevistaDevolucao;
-    }
-
-    public void setDataPrevistaDevolucao(LocalDate dataPrevistaDevolucao) {
-        this.dataPrevistaDevolucao = dataPrevistaDevolucao;
     }
 
     public LocalDate getDataDevolucao() {
@@ -61,9 +48,13 @@ public class Emprestimo {
         return exemplar;
     }
 
+    public String getNomeEmprestimo() {
+        return nomeEmprestimo;
+    }
+
     @Override
     public String toString() {
-        return livro.getTitulo();
+        return exemplar.getLivro().getTitulo() ;
     }
 
 }

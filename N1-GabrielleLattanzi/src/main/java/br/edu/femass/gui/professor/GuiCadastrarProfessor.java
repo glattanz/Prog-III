@@ -26,6 +26,9 @@ public class GuiCadastrarProfessor {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    if(campoNome.getText().isEmpty() || campoEndereco.getText().isEmpty() || campoTelefone.getText().isEmpty() || campoDisciplina.getText().isEmpty())
+                        JOptionPane.showMessageDialog(getjPanelCadastrarProfessor(), "Preencha todos os campos!");
+
                     Professor professor = new Professor(campoNome.getText(), campoEndereco.getText(), campoTelefone.getText(), campoDisciplina.getText());
                     new DaoProfessor().save(professor);
                     JOptionPane.showMessageDialog(null, "Professor salvo!");
@@ -34,16 +37,5 @@ public class GuiCadastrarProfessor {
                 }
             }
         });
-    }
-
-    public static void main(String[] args) {
-        GuiCadastrarProfessor guiCadastrarProfessor = new GuiCadastrarProfessor();
-        JFrame frame = new JFrame("Cadastar professor");
-        frame.setContentPane(guiCadastrarProfessor.jPanelCadastrarProfessor);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
     }
 }

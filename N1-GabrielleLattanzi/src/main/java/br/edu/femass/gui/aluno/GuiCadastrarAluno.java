@@ -27,6 +27,9 @@ public class GuiCadastrarAluno {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
+                    if(campoNome.getText().isEmpty() || campoEndereco.getText().isEmpty() || campoTelefone.getText().isEmpty() || campoMatricula.getText().isEmpty())
+                        JOptionPane.showMessageDialog(getjPanelCadastrarAluno(), "Preencha todos os campos!");
+
                     Aluno aluno = new Aluno(campoNome.getText(), campoEndereco.getText(), campoTelefone.getText(), campoMatricula.getText());
                     new DaoAluno().save(aluno);
                     JOptionPane.showMessageDialog(null, "Aluno salvo!");
@@ -37,16 +40,4 @@ public class GuiCadastrarAluno {
             }
         });
     }
-
-    public static void main(String[] args) {
-        GuiCadastrarAluno guiCadastrarAluno = new GuiCadastrarAluno();
-        JFrame frame = new JFrame("Cadastar aluno");
-        frame.setContentPane(guiCadastrarAluno.jPanelCadastrarAluno);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
-    }
-
 }

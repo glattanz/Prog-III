@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ExemplarTest {
 
     @Test
-    void criarExemplar(){
+    void criarExemplar() throws Exception {
 
         Exemplar exemplar = new Exemplar(new Livro());
 

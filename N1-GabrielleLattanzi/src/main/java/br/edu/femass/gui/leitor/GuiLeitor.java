@@ -74,16 +74,4 @@ public class GuiLeitor {
     public JPanel getjPanelLeitor() {
         return jPanelLeitor;
     }
-
-    public static void main(String[] args) {
-        GuiLeitor guiLeitor = new GuiLeitor();
-        JFrame frame = new JFrame("Leitor");
-        frame.setContentPane(guiLeitor.jPanelLeitor);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        frame.pack();
-
-        frame.setVisible(true);
-
-    }
 }

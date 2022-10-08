@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProfessorTest {
 
     @Test
-    void criarProfessor(){
+    void criarProfessor() throws Exception {
 
         Professor professor = new Professor("Nome", "Endereço", "Telefone", "Disciplina");
 

@@ -38,21 +38,25 @@ public class GuiAtendente {
 
                 try {
                     List<Aluno> alunos = new DaoAluno().getAll();
-                    guiEmprestimo.listaAlunos.setListData(alunos.toArray());
-                } catch (Exception ex) {
-                    throw new RuntimeException(ex);
-                }
-
-                try {
                     List<Professor> professores = new DaoProfessor().getAll();
-                    guiEmprestimo.listaProfessores.setListData(professores.toArray());
+                    List<Leitor> leitores = new ArrayList<>();
+                    leitores.addAll(alunos);
+                    leitores.addAll(professores);
+                    guiEmprestimo.listaLeitores.setListData(leitores.toArray());
                 } catch (Exception ex) {
                     throw new RuntimeException(ex);
                 }
 
                 try {
-                    List<Exemplar> exemplares = new DaoExemplar().getAll();
-                    guiEmprestimo.listaExemplares.setListData(exemplares.toArray());
+                    List<Livro> livros = new DaoLivro().getAll();
+                    List<Livro> livrosDisponiveis = new ArrayList<>();
+                    for (Livro livro : livros) {
+                        if(livro.getQntExemplares() > 0){
+                            livrosDisponiveis.add(livro);
+                        }
+                    }
+
+                    guiEmprestimo.listaLivros.setListData(livrosDisponiveis.toArray());
                 } catch (Exception ex) {
                     throw new RuntimeException(ex);
                 }
@@ -70,8 +74,6 @@ public class GuiAtendente {
                 frame.setContentPane(guiLeitor.getjPanelLeitor());
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-
-
                 frame.pack();
                 frame.setVisible(true);
             }
@@ -80,22 +82,5 @@ public class GuiAtendente {
 
     public JPanel getjPanelAtendente() {
         return jPanelAtendente;
-    }
-
-    public static void main(String[] args) {
-        GuiAtendente guiAtendente = new GuiAtendente();
-        JFrame frame = new JFrame("Atendente");
-        frame.setContentPane(guiAtendente.getjPanelAtendente());
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
-        try {
-            List<Emprestimo> emprestimos = new DaoEmprestimo().getAll();
-            guiAtendente.listaEmprestimos.setListData(emprestimos.toArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        frame.pack();
-        frame.setVisible(true);
     }
 }

@@ -15,21 +15,4 @@ public class GuiConsultarLivros {
         return jPanelConsultarLivros;
     }
 
-    public static void main(String[] args) {
-        GuiConsultarLivros guiConsultarLivros = new GuiConsultarLivros();
-        JFrame frame = new JFrame("Consultar livros");
-        frame.setContentPane(guiConsultarLivros.jPanelConsultarLivros);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        try {
-            List<Livro> livros = new DaoLivro().getAll();
-            guiConsultarLivros.listaLivros.setListData(livros.toArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
-        frame.pack();
-
-        frame.setVisible(true);
-    }
 }

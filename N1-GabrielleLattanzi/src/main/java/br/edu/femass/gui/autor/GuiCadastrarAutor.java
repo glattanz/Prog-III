@@ -27,8 +27,12 @@ public class GuiCadastrarAutor {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
+                    if(campoNome.getText().isEmpty() || campoSobrenome.getText().isEmpty() || campoNacionalidade.getText().isEmpty())
+                        JOptionPane.showMessageDialog(getjPanelCadastrarAutor(), "Preencha todos os campos!");
+
                     Autor autor = new Autor(campoNome.getText(), campoSobrenome.getText(), campoNacionalidade.getText());
                     new DaoAutor().save(autor);
+                    updateList();
 
                     JOptionPane.showMessageDialog(jPanelCadastrarAutor, "Autor salvo!");
 
@@ -39,30 +43,13 @@ public class GuiCadastrarAutor {
         });
     }
 
-    public static void main(String[] args) {
-        //Painel
-        GuiCadastrarAutor guiCadastrarAutor = new GuiCadastrarAutor();
-        //JFrame
-        JFrame frame = new JFrame("Cadastar autor");
-        //Dentro do JFrame colocamos o jPanelAutor, que esta no form GuiAutor
-        frame.setContentPane(guiCadastrarAutor.jPanelCadastrarAutor);
-
-        //Configuração do botão de fechar
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-
+    public void updateList(){
         try {
-            //Cria uma nova lista com todos os autores cadastrados no DaoAutor
             List<Autor> autores = new DaoAutor().getAll();
-            //Atualiza a lista
-            guiCadastrarAutor.listaAutores.setListData(autores.toArray());
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+            this.listaAutores.setListData(autores.toArray());
+        } catch (Exception ex) {
+            throw new RuntimeException(ex);
         }
-
-        //Mantem o layout independente do sistema operacional
-        frame.pack();
-
-        frame.setVisible(true);
     }
 
     public JPanel getjPanelCadastrarAutor() {
