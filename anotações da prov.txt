@@ -1,0 +1,13 @@
+Sempre que na cardinalidade tenha 1..* esse 1 representa que precisa ter definido no metodo construtor (Ex: Para existir um livro precisa ter em seu construtor um Autor)
+
+0..* significa que uma instancia pode preexistir a outra
+
+Um emprestimo é referente à 1 exemplar apenas
+
+manter =  crud
+
+relatorio de livros em atraso
+data limite < hoje
+data de devolução = null
+
+DISPOSE_ON_CLOSE

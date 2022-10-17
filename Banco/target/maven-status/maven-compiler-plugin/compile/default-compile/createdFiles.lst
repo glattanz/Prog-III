@@ -1,0 +1,9 @@
+br\edu\femass\dao\DaoCliente$1.class
+br\edu\femass\App.class
+br\edu\femass\dao\DaoCliente.class
+br\edu\femass\model\Historico.class
+br\edu\femass\model\TipoLancamento.class
+br\edu\femass\utils\CPF.class
+br\edu\femass\model\Cliente.class
+br\edu\femass\utils\Exemplo.class
+br\edu\femass\model\Conta.class

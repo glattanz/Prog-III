@@ -1,0 +1,33 @@
+[ {
+  "nome" : "Gabreille",
+  "cpf" : "23779417022",
+  "endereco" : null,
+  "contas" : [ ]
+}, {
+  "nome" : "Maria",
+  "cpf" : "70178568058",
+  "endereco" : "Rua 2",
+  "contas" : [ {
+    "numero" : 1,
+    "saldo" : 100.0,
+    "especial" : 0.0,
+    "historicos" : [ {
+      "data" : [ 2022, 9, 3, 21, 55, 8, 802977200 ],
+      "valor" : 1000.0,
+      "tipoLancamento" : "CREDITO"
+    }, {
+      "data" : [ 2022, 9, 3, 21, 55, 8, 802977200 ],
+      "valor" : 100.0,
+      "tipoLancamento" : "CREDITO"
+    }, {
+      "data" : [ 2022, 9, 3, 21, 55, 8, 802977200 ],
+      "valor" : 1000.0,
+      "tipoLancamento" : "DEBITO"
+    } ]
+  }, {
+    "numero" : 2,
+    "saldo" : 0.0,
+    "especial" : 1000.0,
+    "historicos" : [ ]
+  } ]
+} ]
